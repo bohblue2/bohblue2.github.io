@@ -34,6 +34,10 @@
     {% endif %}
 
     <title>{{ title }}</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <meta name="description" content="{{ description }}">
     {% if page.tags %}
         <meta name="keywords" content="{{ page.tags | join: ', ' }}">
@@ -88,10 +92,7 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" />
 
     <!-- JavaScript enabled/disabled -->
-<!--     <script>
+    <script>
         document.querySelector('html').classList.remove('no-js');
-    </script> -->
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </script>
 </head>
